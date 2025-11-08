@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -8,12 +8,12 @@ import {
   TextInput,
   TouchableOpacity,
   Dimensions,
-} from 'react-native';
+} from "react-native";
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get("window");
 
-const BANNER = require('../Assets/Addvertisement.png');
-const SAMPLE_CARD = require('../Assets/laviegarden.png');
+import BANNER from "../../assets/banner.png";
+import SAMPLE_CARD from "../../assets/Buffet.png";
 
 export default function UserHomepage() {
   return (
@@ -55,13 +55,13 @@ export default function UserHomepage() {
 
           {/* Categories */}
           <View style={styles.categoriesRow}>
-            {['Restaurant', 'Bakery', 'Fruits & Veg', 'Grocery'].map(
+            {["Restaurant", "Bakery", "Fruits & Veg", "Grocery"].map(
               (label, i) => (
                 <View key={i} style={styles.catItem}>
                   <View style={styles.catCircle} />
                   <Text style={styles.catLabel}>{label}</Text>
                 </View>
-              ),
+              )
             )}
           </View>
 
@@ -167,30 +167,30 @@ export default function UserHomepage() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#26493f' },
+  container: { flex: 1, backgroundColor: "#26493f" },
   scroll: { paddingBottom: 120 },
   header: {
     paddingTop: 44,
     paddingHorizontal: 20,
     paddingBottom: 18,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-  deliveryLabel: { color: '#cfe6dd', fontSize: 12 },
-  deliveryPlace: { color: '#fff', fontWeight: '700', marginTop: 6 },
+  deliveryLabel: { color: "#cfe6dd", fontSize: 12 },
+  deliveryPlace: { color: "#fff", fontWeight: "700", marginTop: 6 },
   helpCircle: {
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: 'rgba(255,255,255,0.12)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "rgba(255,255,255,0.12)",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  helpText: { color: '#fff', fontWeight: '700' },
+  helpText: { color: "#fff", fontWeight: "700" },
 
   panel: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     padding: 18,
@@ -199,152 +199,152 @@ const styles = StyleSheet.create({
   },
   searchRow: { marginTop: 6, marginBottom: 12 },
   searchInput: {
-    backgroundColor: '#f2f2f2',
+    backgroundColor: "#f2f2f2",
     borderRadius: 22,
     paddingHorizontal: 18,
     height: 44,
     fontSize: 16,
   },
 
-  bannerWrap: { marginTop: 6, alignItems: 'center' },
+  bannerWrap: { marginTop: 6, alignItems: "center" },
   banner: { width: width - 72, height: 120, borderRadius: 12 },
-  pagination: { flexDirection: 'row', marginTop: 8 },
+  pagination: { flexDirection: "row", marginTop: 8 },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#2b5d4f',
+    backgroundColor: "#2b5d4f",
     marginHorizontal: 4,
   },
 
   categoriesRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginTop: 14,
     paddingHorizontal: 6,
   },
-  catItem: { alignItems: 'center', width: (width - 72) / 4 },
+  catItem: { alignItems: "center", width: (width - 72) / 4 },
   catCircle: {
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: '#dfeee3',
+    backgroundColor: "#dfeee3",
     marginBottom: 6,
   },
-  catLabel: { fontSize: 12, color: '#4b514f' },
+  catLabel: { fontSize: 12, color: "#4b514f" },
 
   sectionTitle: {
     marginTop: 18,
-    backgroundColor: '#e9f0ea',
-    alignSelf: 'flex-start',
+    backgroundColor: "#e9f0ea",
+    alignSelf: "flex-start",
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 14,
-    color: '#1b3d34',
-    fontWeight: '700',
+    color: "#1b3d34",
+    fontWeight: "700",
     marginBottom: 10,
   },
 
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 12,
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: 14,
     borderWidth: 1,
-    borderColor: '#e6efea',
+    borderColor: "#e6efea",
   },
-  cardImage: { width: '100%', height: 150 },
+  cardImage: { width: "100%", height: 150 },
   cardBody: { padding: 12 },
   cardTopRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   badge: {
-    backgroundColor: '#2b5d4f',
+    backgroundColor: "#2b5d4f",
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,
   },
-  badgeText: { color: '#fff', fontSize: 12 },
+  badgeText: { color: "#fff", fontSize: 12 },
   rating: {
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: "rgba(0,0,0,0.6)",
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,
   },
-  ratingText: { color: '#fff' },
-  cardTitle: { fontWeight: '700', marginTop: 8 },
-  cardSubtitle: { color: '#6b6f6d' },
-  cardEnds: { color: '#9aa0a6', marginTop: 6 },
+  ratingText: { color: "#fff" },
+  cardTitle: { fontWeight: "700", marginTop: 8 },
+  cardSubtitle: { color: "#6b6f6d" },
+  cardEnds: { color: "#9aa0a6", marginTop: 6 },
   cardFooter: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: 10,
   },
-  priceOld: { color: '#9aa0a6', textDecorationLine: 'line-through' },
-  priceNew: { color: '#1b6b4f', fontWeight: '700' },
+  priceOld: { color: "#9aa0a6", textDecorationLine: "line-through" },
+  priceNew: { color: "#1b6b4f", fontWeight: "700" },
 
   cardSmall: {
-    flexDirection: 'row',
-    backgroundColor: '#fff',
+    flexDirection: "row",
+    backgroundColor: "#fff",
     borderRadius: 12,
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#e6efea',
+    borderColor: "#e6efea",
   },
   cardImageSmall: { width: 110, height: 90 },
   cardBodySmall: { flex: 1, padding: 10 },
-  cardTitleSmall: { fontWeight: '700' },
-  cardSubtitleSmall: { color: '#6b6f6d' },
+  cardTitleSmall: { fontWeight: "700" },
+  cardSubtitleSmall: { color: "#6b6f6d" },
   cardFooterSmall: { marginTop: 8 },
-  priceNewSmall: { color: '#1b6b4f', fontWeight: '700' },
+  priceNewSmall: { color: "#1b6b4f", fontWeight: "700" },
 
   charityCard: {
-    backgroundColor: '#26493f',
+    backgroundColor: "#26493f",
     borderRadius: 12,
     padding: 14,
     marginTop: 12,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
-  charityTitle: { color: '#fff', fontWeight: '700', fontSize: 16 },
+  charityTitle: { color: "#fff", fontWeight: "700", fontSize: 16 },
   donateBtn: {
-    backgroundColor: '#f4b23a',
+    backgroundColor: "#f4b23a",
     paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 8,
   },
-  donateText: { color: '#fff', fontWeight: '700' },
+  donateText: { color: "#fff", fontWeight: "700" },
 
   bottomNavWrap: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     bottom: 14,
     height: 72,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
-  tabLeft: { position: 'absolute', left: 40, bottom: 14 },
-  tabRight: { position: 'absolute', right: 40, bottom: 14 },
+  tabLeft: { position: "absolute", left: 40, bottom: 14 },
+  tabRight: { position: "absolute", right: 40, bottom: 14 },
   tabIcon: {
     width: 48,
     height: 48,
     borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
-  fab: { position: 'absolute', bottom: 0, alignSelf: 'center' },
+  fab: { position: "absolute", bottom: 0, alignSelf: "center" },
   homeBtn: {
     width: 72,
     height: 72,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 36,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     elevation: 6,
   },
 });

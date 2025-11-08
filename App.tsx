@@ -1,7 +1,4 @@
-// D:\herald\FYP\FYP_App\App.tsx
-
 import * as React from 'react';
-// Navigation imports
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
